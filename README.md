@@ -1,8 +1,8 @@
-# Eventfy - Plateforme de Gestion d'Événements
+# 🎉 Eventfy Sénégal - Plateforme de Gestion d'Événements
 
 ## 🎯 Description
 
-Eventfy est une plateforme complète de gestion d'événements développée avec Django (backend) et React (frontend). Elle permet aux utilisateurs de créer, organiser et participer à des événements de toutes sortes.
+Eventfy Sénégal est une plateforme complète de gestion d'événements développée avec Django (backend) et React (frontend), spécialement adaptée au contexte sénégalais. Elle permet aux utilisateurs de créer, organiser et participer à des événements culturels, professionnels et communautaires au Sénégal.
 
 ## ✨ Fonctionnalités
 
@@ -50,9 +50,10 @@ Eventfy est une plateforme complète de gestion d'événements développée avec
 - **CORS** : Support cross-origin pour le frontend
 
 ### Frontend (React)
-- **Framework** : React 19.1.1
+- **Framework** : React 18.2.0
 - **Build** : Create React App
-- **Interface** : Interface moderne et responsive
+- **Interface** : Interface moderne et responsive adaptée au Sénégal
+- **Localisation** : Prix en FCFA, villes sénégalaises, thème culturel
 
 ### Modèles de Données
 - **Category** : Catégories d'événements
@@ -71,8 +72,8 @@ Eventfy est une plateforme complète de gestion d'événements développée avec
 
 ### 1. Cloner le projet
 ```bash
-git clone <repository-url>
-cd Eventfy
+git clone https://github.com/dieyepapa/projet-eventfy.git
+cd projet-eventfy
 ```
 
 ### 2. Configuration du Backend
@@ -123,6 +124,8 @@ npm install
 # Démarrer le serveur de développement
 npm start
 ```
+
+Le frontend sera accessible sur `http://localhost:3000` avec l'interface adaptée au Sénégal (prix en FCFA, villes sénégalaises, thème culturel).
 
 ### 4. Variables d'environnement
 Créez un fichier `.env` à la racine du projet basé sur `env.example` :

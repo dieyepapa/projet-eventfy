@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware"
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -84,6 +85,7 @@ WSGI_APPLICATION = 'Eventfy.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+import dj_database_url
 
 DATABASES = {
     'default': {
@@ -91,6 +93,13 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Si DATABASE_URL existe (par ex. sur Heroku), on écrase la config par défaut
+DATABASES["default"] = dj_database_url.config(
+    default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+    conn_max_age=600,
+    ssl_require=False
+)
 
 # Configuration PostgreSQL (à utiliser en production)
 # DATABASES = {

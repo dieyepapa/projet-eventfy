@@ -174,3 +174,8 @@ $RECYCLE.BIN/
 # Temporary files
 *.tmp
 *.temp
+
+# Dossiers de développement multiples (garder seulement les versions finales)
+eventfy-1/
+eventfy-2/
+eventfy-front/
