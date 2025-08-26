@@ -1,0 +1,179 @@
+/* Thème inspiré du Sénégal pour Eventfy */
+
+:root {
+  /* Couleurs inspirées du drapeau sénégalais et de la culture */
+  --senegal-green: #00853f;
+  --senegal-yellow: #fdef42;
+  --senegal-red: #e31b23;
+  --senegal-gold: #d4af37;
+  --senegal-terracotta: #cd853f;
+  --senegal-ocean: #006994;
+  --senegal-sand: #f5e6d3;
+  
+  /* Couleurs primaires adaptées */
+  --primary-50: #f0f9f4;
+  --primary-100: #dcf2e3;
+  --primary-200: #bce5cb;
+  --primary-300: #8dd1a7;
+  --primary-400: #57b47c;
+  --primary-500: var(--senegal-green);
+  --primary-600: #00753a;
+  --primary-700: #005d2e;
+  --primary-800: #004a25;
+  --primary-900: #003d1f;
+}
+
+/* Styles pour les éléments culturels sénégalais */
+.senegal-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--senegal-yellow) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--senegal-red) 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+.senegal-gradient {
+  background: linear-gradient(135deg, var(--senegal-green) 0%, var(--senegal-ocean) 100%);
+}
+
+.senegal-card {
+  border-left: 4px solid var(--senegal-green);
+  background: linear-gradient(to right, rgba(0, 133, 63, 0.05), transparent);
+}
+
+.senegal-button {
+  background: var(--senegal-green);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.senegal-button:hover {
+  background: var(--senegal-ocean);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 133, 63, 0.3);
+}
+
+.senegal-accent {
+  color: var(--senegal-green);
+}
+
+.senegal-bg-light {
+  background-color: var(--senegal-sand);
+}
+
+/* Animations inspirées des mouvements de danse sénégalaise */
+@keyframes sabar-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.sabar-animation {
+  animation: sabar-bounce 2s infinite;
+}
+
+/* Styles pour les cartes d'événements */
+.event-card-senegal {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 133, 63, 0.1);
+}
+
+.event-card-senegal:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 133, 63, 0.15);
+  border-color: var(--senegal-green);
+}
+
+/* Styles pour le header avec motifs sénégalais */
+.header-senegal {
+  background: linear-gradient(135deg, var(--senegal-green) 0%, var(--senegal-ocean) 100%);
+  position: relative;
+}
+
+.header-senegal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.1) 10px,
+      rgba(255, 255, 255, 0.1) 20px
+    );
+}
+
+/* Styles pour les badges et statuts */
+.badge-senegal {
+  background: var(--senegal-green);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-featured {
+  background: var(--senegal-gold);
+  color: #1a1a1a;
+}
+
+.badge-free {
+  background: var(--senegal-ocean);
+  color: white;
+}
+
+/* Responsive design pour mobile */
+@media (max-width: 768px) {
+  .senegal-pattern {
+    background-size: 15px 15px;
+  }
+  
+  .event-card-senegal {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Styles pour les formulaires */
+.form-senegal .form-input {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-senegal .form-input:focus {
+  border-color: var(--senegal-green);
+  box-shadow: 0 0 0 3px rgba(0, 133, 63, 0.1);
+}
+
+/* Styles pour les statistiques du dashboard */
+.stat-card-senegal {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid var(--senegal-green);
+  transition: all 0.3s ease;
+}
+
+.stat-card-senegal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Couleurs spécifiques pour différents types de stats */
+.stat-events { border-left-color: var(--senegal-green); }
+.stat-participants { border-left-color: var(--senegal-ocean); }
+.stat-views { border-left-color: var(--senegal-gold); }
+.stat-revenue { border-left-color: var(--senegal-red); }
